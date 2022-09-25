@@ -10,12 +10,17 @@
 	$agree = $this->hidden?array('agree' => 0, 'recording' => true):agreeNum($this->cid);
 ?>
 
+
+
 <div id="post">
 	<div id="post-header" style="background-image:url(<?php  $imgurl = $this->fields->imgurl;if($imgurl != ''){echo $imgurl;}else{if($this->options->enableFirstIMG == 1 && getPostImg($this)){echo getPostImg($this);}else{echo replaceBannerUrl($this->options->defaultPostIMG);}}?>)">
 		<div id="post-header-mask">
 			<div id="post-header-content">
 				<h2 id="post-content-title"><?php $this->title();?></h2>
 				<span id="post-content-meta"><?php $this->date('F j, Y'); ?> · <?php $this->category(' · '); ?> · <?php get_post_view($this); ?>次阅读</span>
+
+				   
+
 			</div>
 		</div>
 	</div>
@@ -55,23 +60,31 @@
 
 	<p align='center'>
 		<?php if ($this->options->feedIMG): ?>
-			<a id="feedme" onclick="slideToggle($('#feedme-content'))">喝杯水</a>
+			<a id="feedme" onclick="feedme_show()">喝杯水</a>
 		<?php endif; ?>
 		<a id="agree-btn" class="<?php echo $agree['recording']?'agreed':''; ?>" data-cid="<?php echo $this->cid; ?>" data-url="<?php $this->permalink(); ?>">
 	  	<span>ENJOY</span>
 	  	<span class="agree-num"><?php echo $agree['agree']; ?></span>
 		</a>
+
+
 	</p>
+ 
+
 	<div id="feedme-content">
-		<img src="<?php $this->options->feedIMG(); ?>" alt="谢谢大哥"/>
+		<img src="<?php $this->options->feedIMG(); ?>"></img>
 	</div>
 
 
 
 	<div id="post-footer" class="clear">
+<i class="fa fa-search"></i>
+
 		<div id="post-tags"><p><?php $this->tags('', true, 'none'); ?></p></div>
 		<div id="post-lastEdit"><p>最后编辑于<?php echo formatTime($this->modified);?></p></div>
 	</div>
+
+
 </div>
 
 

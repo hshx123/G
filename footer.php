@@ -17,6 +17,9 @@
 				<?php if (isset($this->options->plugins['activated']['ExSearch'])) : ?>
 				<a class="search-form-input">搜索</a>
 				<?php endif ?>
+				
+				<a href="<?php Helper::options()->siteUrl()?>category/Galgame">Galgame</a>
+
 			</nav>
 		</div>
 		<div id="footer-content-right">
@@ -25,10 +28,12 @@
        		<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank"><img src="<?php $this->options->themeUrl('IMG/upyun.png'); ?>"/></a>
       	<?php endif; ?>
 				<?php if ($this->options->enableAliLogo): ?>
-	       <img src="<?php $this->options->themeUrl('IMG/aliyun.svg'); ?>"/>
+	       <img src="<?php $this->options->themeUrl('IMG/aliyun.svg'); ?>"/></p>
 	      <?php endif; ?>
-			</p>
+
 		</div>
+
+
 	</div>
 
 	<script>
@@ -38,20 +43,18 @@
 			const enableLazyload = false;
 		<?php endif; ?>
 	</script>
-	<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+	<script src="https://s1.502.chat/G/JS/jquery.pjax.min.js"></script>
 	<script src="<?php $this->options->themeUrl('JS/lazyload.min.js'); ?>"></script>
 	<script src="<?php $this->options->themeUrl('JS/message.min.js'); ?>"></script>
-	<script src="<?php $this->options->themeUrl('JS/tipped.min.js'); ?>"></script>
- 	<script src="<?php $this->options->themeUrl('JS/X.js'); ?>?v=2.4.9.1"></script>
-	<!-- <script src="<?php $this->options->themeUrl('JS/X.js'); ?>?v=2.4.6.4<?php echo rand(0,1000); ?>"></script> -->
+ 	<script src="<?php $this->options->themeUrl('JS/X.js'); ?>?v=2.4.6.4"></script>
 	<script src="<?php $this->options->themeUrl('JS/prism.js'); ?>"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js"></script>
+	<script src="https://s1.502.chat/G/JS/jquery.fancybox.min.js"></script>
+	<script src="https://s1.502.chat/G/JS/tocbot.min.js"></script>
 	<?php if ($this->options->enablenprogress == 1): ?>
-			<script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+			<script src="hhttps://s1.502.chat/G/JS/nprogress.min.js"></script>
 	<?php endif; ?>
 	<?php if ($this->options->enableSmooth): ?>
-		<script src="https://cdn.jsdelivr.net/gh/gblazex/smoothscroll-for-websites@1.4.10/SmoothScroll.js"></script>
+		<script src="https://s1.502.chat/G/JS/SmoothScroll.js"></script>
 		<script>
 		SmoothScroll({ stepSize: 40 })
 		</script>
@@ -95,12 +98,10 @@
 	ajaxc();
 	PreFancybox();
 	imageinfo();
-	generateTiptools();
 	toc();
 	makeGallery();
 	collapse_toggle();
 	agree();
-	autoNight();
 	jQuery(document).ready(function ($) {
 			$(".lazyload").lazyload({
 						threshold: 100,

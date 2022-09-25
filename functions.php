@@ -1,7 +1,7 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 function themeConfig($form) {
-    echo "<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/youranreus/R@v1.1.5/G/CSS/S.css'/>";
+    echo "<link rel='stylesheet' href='https://s1.502.chat/G/CSS/S.css'/>";
     echo "<h2>G主题设置</h2>";
 
     $favicon = new Typecho_Widget_Helper_Form_Element_Text('favicon', NULL, NULL, _t('图标') , _t(''));
@@ -101,16 +101,10 @@ function themeConfig($form) {
     $form->addInput($enablenprogress);
 
     $enableHeaderSearch = new Typecho_Widget_Helper_Form_Element_Radio('enableHeaderSearch', array(
-        '1' => _t('开启'),
+        '1' => _t('开启') ,
         '0' => _t('关闭')
     ) , '0', _t('在头部添加一个搜索') , _t('默认为关闭'));
     $form->addInput($enableHeaderSearch);
-
-    $enableFooterRightDisplay = new Typecho_Widget_Helper_Form_Element_Radio('enableFooterRightDisplay', array(
-        '1' => _t('开启') ,
-        '0' => _t('关闭')
-    ) , '0', _t('移动端底部图标显示') , _t('默认为关闭'));
-    $form->addInput($enableFooterRightDisplay);
 
     $enableUpyun = new Typecho_Widget_Helper_Form_Element_Radio('enableUpyun', array(
         '1' => _t('我是盟友') ,
@@ -268,7 +262,7 @@ class Gx {
     */
     public static function addButton()
     {
-      echo '  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/youranreus/R@v1.1.7/G/CSS/OwO.min.css?v=2" rel="stylesheet" />';
+      echo '  <link rel="stylesheet" href="https://s1.502.chat/G/CSS/OwO.min.css" rel="stylesheet" />';
 
         echo '
         <style>
@@ -297,7 +291,7 @@ class Gx {
         </style>
         ';
         //核心JS
-        echo '<script src="https://cdn.jsdelivr.net/gh/youranreus/R@v1.2.5/G/JS/editor.js"></script>';
+        echo '<script src="https://s1.502.chat/G/JS/editor.js"></script>';
     }
 
 }

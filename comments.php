@@ -65,7 +65,7 @@ echo $commentClass;
 
         <?php if($this->allow('comment')): ?>
           <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form">
-            <img id="comment-loading" src="https://cdn.jsdelivr.net/gh/youranreus/R@v1.0.3/G/IMG/loading.gif"></img>
+            <img id="comment-loading" src="https://s1.502.chat/G/IMG/loading.gif"></img>
             <div class="cancel-comment-reply clear">
                 <?php $comments->cancelReply(); ?>
             </div>
@@ -74,15 +74,15 @@ echo $commentClass;
               <?php else: ?>
                 <h2 id="response" class="widget-title text-left"><?php _e('添加新评论'); ?></h2>
                   <input type="text" name="author" id="author" placeholder="称呼" value="<?php $this->remember('author'); ?>" />
-                  <input type="email" name="mail" id="mail" placeholder="电子邮件" value="<?php $this->remember('mail'); ?>" />
-                  <input type="text" name="url" id="url" placeholder="网站"  value="<?php $this->remember('url'); ?>" />
+                  <input type="email" name="mail" id="mail" placeholder="电子邮件(QQ邮箱可同步头像)" value="<?php $this->remember('mail'); ?>" />
+                  <input type="text" name="url" id="url" placeholder="网站(可选）"  value="<?php $this->remember('url'); ?>" />
               <?php endif; ?>
               <p>
                   <input name="_" type="hidden" id="comment_" value="<?php echo Helper::security()->getToken(str_replace(array('?_pjax=%23pjax-container', '&_pjax=%23pjax-container'), '', Typecho_Request::getInstance()->getRequestUrl()));?>"/>
-                  <textarea rows="5" name="text" id="textarea" placeholder="在这里输入你的评论..." style="resize:none;"><?php $this->remember('text'); ?></textarea>
+                  <textarea rows="5" name="text" id="textarea" placeholder="在这里输入你的评论...默认使用Gravatar头像，评论至少一中文。若网站很慢或评论失败，请使用代理刷新后再试" style="resize:none;"><?php $this->remember('text'); ?></textarea>
               </p>
               <div class="clear">
-                <div class="OwO-logo" onclick="slideToggle($('#OwO-container'))">
+                <div class="OwO-logo" onclick="OwO_show()">
                   <span>(OwO)</span>
                 </div>
                 <button type="submit" class="submit"><?php _e('发射'); ?></button>

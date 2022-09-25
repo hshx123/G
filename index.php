@@ -5,7 +5,7 @@
  *
  * @package G
  * @author 季悠然
- * @version 2.5.2
+ * @version 2.4.6
  * @link https://gundam.exia.xyz/
  */
 
@@ -17,10 +17,14 @@
     <?php  $this->need('IndexSwitcher.php'); ?>
 
     <div id="pages" class="clear changePage">
-      <?php $this->pageLink('更多 >','next'); ?>
-      <?php $this->pageLink('< 返回','prev'); ?>
+      <?php $this->pageLink('下一页 >','next'); ?>
+      <?php $this->pageLink('< 上一页','prev'); ?>
     </div>
 
   </div>
 </div>
-<?php $this->need('footer.php'); ?>
+
+
+
+
+  <?php $this->need('footer.php'); ?>
